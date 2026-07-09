@@ -1,0 +1,94 @@
+import type { Metadata } from 'next';
+import { getPostBySlug } from '../../../../libs/blog-posts';
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.aquablastpw.com';
+const slug     = 'how-often-should-you-pressure-wash-your-driveway';
+const post     = getPostBySlug(slug)!;
+const url      = `${BASE_URL}/blogs/${slug}`;
+const imgUrl   = `${BASE_URL}/pages/blogs/hvac-filter.jpg`;
+
+export const metadata: Metadata = {
+  title: `${post.title} | AquaBlast Pressure Washing`,
+  description: post.excerpt,
+  keywords: ['driveway pressure washing', 'how often pressure wash driveway', 'concrete cleaning waco', 'oil stain driveway'],
+  authors: [{ name: 'Cody Marsh', url: BASE_URL }],
+  alternates: { canonical: url },
+  openGraph: {
+    title: post.title,
+    description: post.excerpt,
+    url,
+    siteName: 'AquaBlast Pressure Washing',
+    locale: 'en_US',
+    type: 'article',
+    publishedTime: '2026-04-14T08:00:00-05:00',
+    modifiedTime: '2026-04-14T08:00:00-05:00',
+    authors: ['Cody Marsh'],
+    images: [{ url: imgUrl, width: 1200, height: 630, alt: post.imageAlt }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: post.title,
+    description: post.excerpt,
+    images: [imgUrl],
+  },
+  robots: { index: true, follow: true },
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.excerpt,
+  datePublished: '2026-04-14T08:00:00-05:00',
+  dateModified: '2026-04-14T08:00:00-05:00',
+  author: {
+    '@type': 'Person',
+    name: 'Cody Marsh',
+    url: BASE_URL,
+    jobTitle: 'Owner, AquaBlast Pressure Washing',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'AquaBlast Pressure Washing',
+    url: BASE_URL,
+    logo: { '@type': 'ImageObject', url: `${BASE_URL}/logos/android-chrome-192x192.png` },
+  },
+  image: imgUrl,
+  url,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  keywords: 'driveway pressure washing, concrete cleaning waco',
+  articleSection: 'Driveway',
+  inLanguage: 'en-US',
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': url,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2'],
+  },
+  url,
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE_URL}/blogs` },
+    { '@type': 'ListItem', position: 3, name: post.title, item: url },
+  ],
+};
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {children}
+    </>
+  );
+}
