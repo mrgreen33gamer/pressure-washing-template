@@ -19,7 +19,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'House Washing',
     date:     'April 18, 2026',
     readTime: 7,
-    imageSrc: '/pages/blogs/ac-replacement.jpg',
+    imageSrc: '/pages/blogs/house-wash.jpg',
     imageAlt: 'Signs your siding needs a soft wash in Waco TX',
     featured: true,
   },
@@ -30,7 +30,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Driveway',
     date:     'April 14, 2026',
     readTime: 6,
-    imageSrc: '/pages/blogs/hvac-filter.jpg',
+    imageSrc: '/pages/blogs/house-wash.jpg',
     imageAlt: 'How often to pressure wash a driveway in Central Texas',
   },
   {
@@ -40,7 +40,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Education',
     date:     'April 10, 2026',
     readTime: 8,
-    imageSrc: '/pages/blogs/heat-pump.jpg',
+    imageSrc: '/pages/blogs/soft-wash.jpg',
     imageAlt: 'Soft washing vs pressure washing comparison for Texas homes',
   },
 ];

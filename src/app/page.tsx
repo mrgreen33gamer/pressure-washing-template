@@ -45,36 +45,42 @@ export default function HomePage() {
       title: "House Washing",
       body: "Low-pressure soft wash that lifts mold, mildew, and dirt without damaging siding, paint, or landscaping. Your home looks brand-new again.",
       link: "/services/house-washing",
+      image: "/pages/home/services/house-wash.jpg",
     },
     {
       icon: faSprayCanSparkles,
       title: "Roof Cleaning",
       body: "Soft-wash roof cleaning that kills black algae streaks and moss at the root — safe for asphalt shingles, tile, and metal roofs.",
       link: "/services/roof-cleaning",
+      image: "/pages/home/services/roof.jpg",
     },
     {
       icon: faRoad,
       title: "Driveway & Concrete",
       body: "High-pressure cleaning for driveways, sidewalks, patios, and parking pads. Oil stains, tire marks, and mildew — gone.",
       link: "/services/driveway-concrete-cleaning",
+      image: "/pages/home/services/driveway.jpg",
     },
     {
       icon: faDroplet,
       title: "Gutter Cleaning",
       body: "Full gutter and downspout clearing so water flows free. Prevents overflow damage, foundation issues, and mosquito breeding grounds.",
       link: "/services/gutter-cleaning",
+      image: "/pages/home/services/gutter.jpg",
     },
     {
       icon: faTree,
       title: "Deck & Fence Cleaning",
       body: "Restore weathered wood, composite, and vinyl fences and decks. Safe cleaning that prepares surfaces for sealing or staining.",
       link: "/services/deck-fence-cleaning",
+      image: "/pages/home/services/deck.jpg",
     },
     {
       icon: faWarehouse,
       title: "Commercial Pressure Washing",
       body: "Storefronts, parking lots, HOAs, restaurants, and multi-unit properties. Flexible scheduling that won't interrupt your business.",
       link: "/services/commercial-pressure-washing",
+      image: "/pages/home/services/commercial.jpg",
     },
   ];
 
@@ -195,111 +201,58 @@ export default function HomePage() {
     },
   ];
 
+  // Transformation-first: services + CTA early (before/after trade)
   return (
     <main className={styles.pageWrapper}>
-
-      {/* 1. Hero */}
       <WelcomePage />
-
-      {/* 2. Scrolling trust strip — immediately after hero */}
       <TrustBar
         headline="Waco's trusted pressure washing company — licensed, bonded, insured, and guaranteed on every job"
       />
-
-      {/* 3. Impact metrics — build credibility before pitching services */}
-      <div className={styles.section}>
-        <ImpactMetrics
-          title="Numbers That Speak for Us"
-          metrics={metrics}
-          cityName="Waco"
-        />
-      </div>
-
-      {/* 4. Services grid */}
       <div className={styles.section}>
         <ServiceCardComponent
           heading="Complete Exterior Cleaning for Your Home or Business"
           cards={services}
         />
       </div>
-
-      {/* 5. Why Choose Us */}
+      <CTABanner
+        headline="Ready for a Cleaner Exterior?"
+        subline="Houses, driveways, decks, and commercial fronts — soft wash where paint needs care, power where concrete needs bite."
+        primaryText="Call (254) 900-8842"
+        primaryLink="tel:+12549008842"
+        secondaryText="Free Estimate"
+        secondaryLink="/contact"
+        imageSrc="/pages/home/welcome/ba-after.jpg"
+       />
       <div className={styles.section}>
-        <WhyChooseUs
-          cityName="Waco"
-          features={whyFeatures}
-          title="What Makes AquaBlast Different"
-        />
+        <ImpactMetrics title="Numbers That Speak for Us" metrics={metrics} cityName="Waco" />
       </div>
-
-      {/* Contact form — conversion point */}
       <div className={styles.section}>
-        <Variant4
-          title="Request a Free Estimate"
-          cityName="Waco"
-          slug="/"
-          spot="homepage-contact-form"
-          formVariant={2}
-        />
+        <WhyChooseUs cityName="Waco" features={whyFeatures} title="What Makes AquaBlast Different" />
       </div>
-
-      {/* How it works */}
       <div className={styles.section}>
         <ProcessTimeline steps={processSteps} />
       </div>
-
-      {/* Social proof */}
       <div className={styles.section}>
         <Testimonials testimonials={reviews} />
       </div>
-
-      {/* Guarantee */}
       <div className={styles.section}>
         <GuaranteeSection />
       </div>
-
-      {/* Mid-page CTA */}
-      <CTABanner
-        headline="Ready for a Spotless Exterior? Call Us Today."
-        subline="Same-day service across Waco, Temple, Killeen, and all of Central Texas. Flat-rate pricing. Free re-clean guarantee."
-        primaryText="Call (254) 900-8842"
-        primaryLink="tel:+12549008842"
-        secondaryText="Book Online"
-        secondaryLink="/contact"
-      />
-
-      {/* Service areas */}
       <div className={styles.section}>
-        <LocalServiceAreas
-          cityName="Waco"
-          areas={localAreas}
-          servicePath=""
-          title="Serving All of Central Texas"
-        />
+        <LocalServiceAreas cityName="Waco" areas={localAreas} servicePath="" title="Serving All of Central Texas" />
       </div>
-
-      {/* What to expect */}
       <div className={styles.section}>
-        <WhatToExpect
-          sectionTitle="Every Job, Every Time"
-          expectations={expectations}
-        />
+        <WhatToExpect sectionTitle="Every Job, Every Time" expectations={expectations} />
       </div>
-
-      {/* FAQ */}
       <div className={styles.section}>
-        <FAQ
-          cityName="Waco"
-          faq={faq}
-          title="Pressure Washing Questions — Answered Straight"
-        />
+        <FAQ cityName="Waco" faq={faq} title="Pressure Washing Questions — Answered Straight" />
       </div>
-
-      {/* Blog preview */}
       <div className={styles.section}>
         <BlogPreviewGrid />
       </div>
-
+      <div className={styles.section}>
+        <Variant4 title="Request a Free Estimate" cityName="Waco" slug="/" spot="homepage-contact-form" formVariant={2} />
+      </div>
     </main>
   );
 }

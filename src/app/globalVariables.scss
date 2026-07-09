@@ -1,42 +1,36 @@
-// src/app/globalVariables.scss
-// ─────────────────────────────────────────────────────────────────────────────
 // AquaBlast Pressure Washing — Brand Tokens
-//
-// THREE DISTINCT FONTS (unchanged from base template — already work well):
-//   $titleFont  → Barlow Condensed  — bold condensed display (hero h1, section titles)
-//   $headerFont → Outfit            — clean geometric sans   (nav, card titles, labels, CTAs)
-//   $textFont   → Inter             — refined humanist sans  (body copy, form text, paragraphs)
-// ─────────────────────────────────────────────────────────────────────────────
+// IDENTITY: Wet-clean outdoor energy — spray cyan on deep lagoon
+// FONTS: Teko (display) · Manrope (UI) · Karla (body)
 
-$titleFont:  var(--font-barlow-condensed), 'Barlow Condensed', sans-serif;
-$headerFont: var(--font-outfit),           'Outfit',           sans-serif;
-$textFont:   var(--font-inter),            'Inter',            sans-serif;
+$titleFont:  var(--font-title),  'Teko',    sans-serif;
+$headerFont: var(--font-header), 'Manrope', sans-serif;
+$textFont:   var(--font-body),   'Karla',   sans-serif;
 
-// ── Core Palette ─────────────────────────────────────────────────────────────
 $black:      #000000;
-$obsidian:   #06232b;
-$blackflat:  #0d2f38;
+$obsidian:   #041c22;   // deep lagoon
+$blackflat:  #0a2e38;
 $white:      #FFFFFF;
-$offwhite:   #f5fbfc;
+$offwhite:   #ecfeff;   // mist spray
 
-// Greys (teal-tinted)
-$darkgrey:   #6f9aa3;
-$grey:       #3f6b75;
-$lightgrey:  #c9dee2;
+$darkgrey:   #7dd3fc;
+$grey:       #0e7490;
+$lightgrey:  #cffafe;
 
-// Brand Accent
-$teal:       #0891b2;
-$lightteal:  #22c3e6;
-$darkteal:   #0e7490;
-
-// Legacy aliases (kept so any component still referencing $orange/$green resolves to the live accent)
+// Accent — spray cyan (distinct from electrical neon & plumbing teal)
+$teal:       #0ea5e9;
+$lightteal:  #38bdf8;
+$darkteal:   #0369a1;
 $orange:      $teal;
 $lightorange: $lightteal;
 $darkorange:  $darkteal;
 $green:       $teal;
 $lightgreen:  $lightteal;
 $darkgreen:   $darkteal;
-$blue:       #1e6fa8;
+$blue:       #0284c7;
 
-// Error
-$danger-red: #ef4444;
+$radius-sm:  8px;
+$radius-md:  12px;
+$radius-lg:  18px;
+$radius-pill: 999px;
+
+$danger-red: #e11d48;
