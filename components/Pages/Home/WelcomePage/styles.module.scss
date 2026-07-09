@@ -339,3 +339,27 @@
 }
 
 /* end identity layer */
+
+/* === HERO PATTERN UNIQUENESS — pressure-washing-template === */
+.hero {
+  &::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: none !important;
+    background-size: auto !important;
+    opacity: 0.99 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+
+  &::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: radial-gradient(ellipse 50% 40% at 58% 35%, rgba($orange, 0.041), transparent 70%), radial-gradient(ellipse 40% 50% at 98% 68%, rgba($white, 0.03), transparent 65%) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+}
+/* end hero pattern */
