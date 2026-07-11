@@ -3,7 +3,6 @@ import BlogHero from '#/BlogComponents/BlogHero/BlogHero';
 import BlogBody, { BlogSection } from '#/BlogComponents/BlogBody/BlogBody';
 import BlogCTA from '#/BlogComponents/BlogCTA/BlogCTA';
 import NewsletterSignup from '#/BlogComponents/NewsletterSignup/NewsletterSignup';
-import AuthorBio from '#/PageComponents/AuthorBio/AuthorBio';
 import { faRoad, faOilCan, faCloudSun, faCalendarCheck, faShieldHalved, faLeaf } from '@fortawesome/free-solid-svg-icons';
 
 const sections: BlogSection[] = [
@@ -69,7 +68,6 @@ export default function Page() {
         buttonText="Get Free Estimate"
         buttonHref="/services/driveway-concrete-cleaning"
       />
-      <AuthorBio cityName="Waco" />
       <NewsletterSignup variant={1} spot="driveway-frequency-blog" />
     </>
   );

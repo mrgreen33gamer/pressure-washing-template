@@ -180,12 +180,12 @@ const mapPins = [
 ];
 const coverageLabel = 'Central Texas coverage';
 const materials = [
-  { name: "House Soft", swatch: "#0ea5e9", imageSrc: "/pages/home/welcome/mat-1.jpg" },
-  { name: "Driveway", swatch: "#38bdf8", imageSrc: "/pages/home/welcome/mat-2.jpg" },
-  { name: "Deck", swatch: "#0284c7", imageSrc: "/pages/home/welcome/mat-3.jpg" },
-  { name: "Roof*", swatch: "#7dd3fc", imageSrc: "/pages/home/welcome/mat-1.jpg" },
-  { name: "Fleet", swatch: "#0369a1", imageSrc: "/pages/home/welcome/mat-2.jpg" },
-  { name: "Storefront", swatch: "#0c4a6e", imageSrc: "/pages/home/welcome/mat-3.jpg" }
+  { name: "House Soft", swatch: "#0ea5e9", imageSrc: "/pages/home/welcome/after-house.jpg" },
+  { name: "Driveway", swatch: "#38bdf8", imageSrc: "/pages/home/welcome/before-driveway.jpg" },
+  { name: "Deck", swatch: "#0284c7", imageSrc: "/pages/home/welcome/after-clean.jpg" },
+  { name: "Roof*", swatch: "#7dd3fc", imageSrc: "/pages/home/welcome/after-house.jpg" },
+  { name: "Fleet", swatch: "#0369a1", imageSrc: "/pages/home/welcome/before-driveway.jpg" },
+  { name: "Storefront", swatch: "#0c4a6e", imageSrc: "/pages/home/welcome/after-clean.jpg" }
 ];
 const quote = "Driveway looks poured yesterday. Soft wash on the siding did not scar the paint.";
 const authorName = "Erica T.";
